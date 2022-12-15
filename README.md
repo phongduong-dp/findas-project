@@ -15,10 +15,10 @@ Some fancy introduction will be written later.
 * something 2
 
 ## How to use
-1. Install Vite using **_npm i vite@latest_**.
+1. Install Vite using **_npm i vite@latest_**
 2. Install all dependencies using **_npm install_**.
-3. Run development server using **_npm run dev_**.
-4. Gain access for eviroment variables file (.env).
+3. Gain access for evironment variables file (.env).
+4. Run development server using **_npm run dev_**.
 
 
 # WORK TO-DO
