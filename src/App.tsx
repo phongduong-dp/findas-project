@@ -3,6 +3,16 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { Navbar, Footer, Sidebar, ThemeSetting } from "./components";
+import {
+  Overview,
+  Calendar,
+  CustomChart,
+  Docs,
+  Statistics,
+  Transactions,
+} from "./pages";
+
 import "./App.css";
 
 function App() {
@@ -34,7 +44,7 @@ function App() {
               className="w-64 fixed sidebar dark:bg-secondary-dark-bg 
             bg-blue-800"
             >
-              Sidebar
+              <Sidebar />
             </div>
           ) : (
             <div className="w-0 dark: bg-secondary-dark-bg">Sidebar off</div>
@@ -47,26 +57,20 @@ function App() {
             }`}
           >
             <div className="fixed md:static bg-yellow-500 navbar w-full dark:bg-main-dark-bg">
-              Navbar
+              <Navbar />
             </div>
           </div>
 
           {/* Routing */}
           <div>
             <Routes>
-              {/* Overview Dashboard */}
-              <Route path="/" element="Overview" />
-              <Route path="/overview" element="Overview" />
-
-              {/* Pages */}
-              <Route path="/transaction" element="Transaction" />
-
-              {/* Apps */}
-              <Route path="/boards" element="Kanban" />
-              <Route path="/calendar" element="Calendar" />
-
-              {/* Charts */}
-              <Route path="/outcome" element="OutcomeChart" />
+              <Route path="/" element={<Overview />} />
+              <Route path="/overview" element={<Overview />} />
+              <Route path="/statistics" element={<Statistics />} />
+              <Route path="/transaction" element={<Transactions />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/custom-chart" element={<CustomChart />} />
+              <Route path="/docs" element={<Docs />} />
             </Routes>
           </div>
         </div>
